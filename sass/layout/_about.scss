@@ -1,0 +1,9 @@
+.section-about {
+    &--text-content {
+        max-width: 40%;
+    }
+}
+.container {
+    display: flex;
+    justify-content: space-around;
+}
