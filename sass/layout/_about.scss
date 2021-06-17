@@ -1,9 +1,14 @@
 .section-about {
+    backface-visibility: hidden;
     &--text-content {
         max-width: 40%;
+    }
+    &--image-dispay {
+        max-width: 35%;
     }
 }
 .container {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
+    align-items: center;
 }
