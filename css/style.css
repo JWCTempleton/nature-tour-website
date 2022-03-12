@@ -317,6 +317,7 @@ body {
     font-weight: 100; }
 
 .story {
+  display: flex;
   width: 75%;
   margin: 0 auto;
   box-shadow: 0 3rem 6rem rgba(0, 0, 0, 0.2);
@@ -333,16 +334,15 @@ body {
   .story__shape {
     width: 15.5rem;
     height: 15.5rem;
-    float: left;
-    shape-outside: circle(50% at 50% 50%);
     clip-path: circle(50% at 50% 50%);
     transform: translateX(-3rem) skewX(12deg);
     position: relative;
-    backface-visibility: hidden; }
+    backface-visibility: hidden;
+    outline: 1px solid transparent; }
   .story__img {
     height: 100%;
     transform: translateX(-4rem);
-    transition: all .5s;
+    transition: all .2s;
     backface-visibility: hidden; }
   .story__text {
     transform: skewX(12deg);
@@ -357,7 +357,7 @@ body {
     text-align: center;
     text-transform: uppercase;
     opacity: 0;
-    transition: all .5s ease-in;
+    transition: all .2s;
     backface-visibility: hidden; }
   .story:hover .story__caption {
     opacity: 1;
@@ -367,6 +367,8 @@ body {
     transform: translateX(-4rem);
     filter: blur(3px) brightness(80%);
     backface-visibility: hidden; }
+  .story:hover .story__shape {
+    outline: 1px solid transparent; }
 
 .header {
   height: 95vh;
