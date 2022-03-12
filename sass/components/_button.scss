@@ -36,6 +36,15 @@
         }
     }
 
+    &--green {
+        background-color: $color-tertiary-light;
+        color: $color-primary-white;
+
+        &::after {
+            background-color: $color-tertiary-light;
+        }
+    }
+
     &--animated {
         animation: moveInBottom .5s ease-out .75s;
         animation-fill-mode: backwards;
