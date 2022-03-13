@@ -12,6 +12,7 @@
         width: 90%;
         display: block;
         color: inherit;
+        transition: all .3s;
 
         &::-webkit-input-placeholder {
             color: #999;
@@ -48,5 +49,51 @@
 
     &__group:not(:last-child) {
         margin-bottom: 2rem;
+    }
+
+    &__radio-group {
+        width: 45%;
+        display: inline-block;
+    }
+
+    &__radio-input {
+        display: none;
+    }
+
+    &__radio-label {
+        font-size: $default-font-size;
+        cursor: pointer;
+        position: relative;
+        padding-left: 4rem;
+    }
+
+    &__radio-button {
+        height: 3rem;
+        width: 3rem;
+        border: 5px solid darken($color-light-blue, 10%);
+        border-radius: 50%;
+        display: inline-block;
+        position: absolute;
+        left: 0;
+        top:-.5rem;
+
+        &::after {
+            content: "";
+            display: block;
+            height: 1.3rem;
+            width: 1.3rem;
+            border-radius: 50%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            background-color: $color-dark-blue;
+            opacity: 0;
+            transition: opacity .2s;
+        }
+    }
+
+    &__radio-input:checked ~ &__radio-label &__radio-button::after {
+        opacity: 1;
     }
 }

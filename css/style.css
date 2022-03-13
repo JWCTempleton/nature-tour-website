@@ -105,20 +105,25 @@ body {
 .u-margin-bottom-small {
   margin-bottom: 1.6rem; }
 
+.u-margin-top-small {
+  margin-top: 1.6rem; }
+
 .u-margin-top-large {
   margin-top: 8rem; }
 
 .u-margin-top-huge {
   margin-top: 10rem; }
 
-.btn:link, .btn:visited {
+.btn, .btn:link, .btn:visited {
   text-transform: uppercase;
   text-decoration: none;
   padding: 1.5rem 4rem;
   display: inline-block;
   font-size: 1.6rem;
   transition: all .2s;
-  position: relative; }
+  position: relative;
+  border: none;
+  cursor: pointer; }
 
 .btn:hover {
   transform: translateY(-3px);
@@ -127,9 +132,10 @@ body {
     transform: scaleX(1.4) scaleY(1.6);
     opacity: 0; }
 
-.btn:active {
+.btn:active, .btn:focus {
   transform: translateY(-1px);
-  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2); }
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+  outline: none; }
 
 .btn--white {
   background-color: #edf6f9;
@@ -399,7 +405,8 @@ body {
   border-right-style: hidden;
   width: 90%;
   display: block;
-  color: inherit; }
+  color: inherit;
+  transition: all .3s; }
   .form__input::-webkit-input-placeholder {
     color: #999; }
   .form__input:focus {
@@ -424,6 +431,45 @@ body {
 
 .form__group:not(:last-child) {
   margin-bottom: 2rem; }
+
+.form__radio-group {
+  width: 45%;
+  display: inline-block; }
+
+.form__radio-input {
+  display: none; }
+
+.form__radio-label {
+  font-size: 1.6rem;
+  cursor: pointer;
+  position: relative;
+  padding-left: 4rem; }
+
+.form__radio-button {
+  height: 3rem;
+  width: 3rem;
+  border: 5px solid #60b5ac;
+  border-radius: 50%;
+  display: inline-block;
+  position: absolute;
+  left: 0;
+  top: -.5rem; }
+  .form__radio-button::after {
+    content: "";
+    display: block;
+    height: 1.3rem;
+    width: 1.3rem;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #006d77;
+    opacity: 0;
+    transition: opacity .2s; }
+
+.form__radio-input:checked ~ .form__radio-label .form__radio-button::after {
+  opacity: 1; }
 
 .header {
   height: 95vh;
