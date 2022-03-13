@@ -32,3 +32,25 @@
     padding: 15rem 0;
     
 }
+
+.section-book {
+    padding: 15rem 0;
+    background-color: darken(rgba($color-primary-white, .92), 10%);
+}
+
+.book {
+    background-image: linear-gradient(105deg, 
+    rgba($color-primary-white, .92) 0%,
+    rgba($color-primary-white, .92) 55%, 
+    transparent 55%),
+    url(../img/booking-image-1.jpg);
+    background-size: 100%;
+    border-radius: 3px;
+    box-shadow: 1rem 2rem 4rem rgba($color-black, .4);
+    height: 50rem;
+
+    &__form {
+        width: 50%;
+        padding: 6rem;
+    }
+}
