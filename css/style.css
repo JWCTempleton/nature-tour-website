@@ -333,6 +333,9 @@ body {
     right: 15rem;
     width: 75%; }
   .card__heading-span {
+    position: relative;
+    top: -5rem;
+    left: 6rem;
     padding: 1rem 1.5rem;
     -webkit-box-direction-break: clone;
     box-decoration-break: clone; }
@@ -373,6 +376,36 @@ body {
   .card__price-value {
     font-size: 6rem;
     font-weight: 100; }
+  @media (max-width: 56.25em) {
+    .card {
+      height: auto;
+      border-radius: .5rem;
+      background-color: #edf6f9;
+      box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15); }
+      .card__side {
+        height: auto;
+        color: white;
+        font-size: 2rem;
+        transition: all .8s ease;
+        position: relative;
+        box-shadow: none; }
+        .card__side--back {
+          transform: rotateY(0);
+          clip-path: polygon(0 15%, 100% 0, 100% 100%, 0% 100%); }
+      .card:hover .card__side--front {
+        transform: rotateY(0); }
+      .card__cta {
+        position: relative;
+        top: 0;
+        left: 0;
+        transform: translate(0);
+        width: 100%;
+        text-align: center;
+        padding: 7rem 4rem 4rem 4rem; }
+      .card__price-box {
+        margin-bottom: 3rem; }
+      .card__price-value {
+        font-size: 5rem; } }
 
 .story {
   display: flex;
@@ -386,9 +419,18 @@ body {
   font-size: 1.6rem;
   transform: skewX(-12deg);
   backface-visibility: hidden; }
+  @media (max-width: 56.25em) {
+    .story {
+      transform: skewX(0);
+      flex-direction: column;
+      width: 90%;
+      padding: 4rem 8rem; } }
   .story > * {
     transform: skewX(12deg);
     backface-visibility: hidden; }
+    @media (max-width: 56.25em) {
+      .story > * {
+        transform: skewX(0); } }
   .story__shape {
     width: 15.5rem;
     height: 15.5rem;
@@ -397,14 +439,27 @@ body {
     position: relative;
     backface-visibility: hidden;
     outline: 1px solid transparent; }
+    @media (max-width: 56.25em) {
+      .story__shape {
+        transform: skewX(0);
+        margin: 0 auto; } }
   .story__img {
     height: 100%;
     transform: translateX(-4rem);
     transition: all .2s;
-    backface-visibility: hidden; }
+    backface-visibility: hidden;
+    outline: 1px solid transparent; }
+    @media (max-width: 56.25em) {
+      .story__img {
+        transform: translateX(0); } }
   .story__text {
     transform: skewX(12deg);
     backface-visibility: hidden; }
+    @media (max-width: 56.25em) {
+      .story__text {
+        transform: skewX(0);
+        padding: 2rem 0;
+        text-align: center; } }
   .story__caption {
     position: absolute;
     top: 50%;
@@ -456,6 +511,9 @@ body {
   display: block;
   color: inherit;
   transition: all .3s; }
+  @media (max-width: 56.25em) {
+    .form__input {
+      width: 100%; } }
   .form__input::-webkit-input-placeholder {
     color: #999; }
   .form__input:focus {
@@ -484,6 +542,10 @@ body {
 .form__radio-group {
   width: 45%;
   display: inline-block; }
+  @media (max-width: 56.25em) {
+    .form__radio-group {
+      width: 100%;
+      margin-bottom: 2rem; } }
 
 .form__radio-input {
   display: none; }
@@ -870,8 +932,20 @@ body {
   background-image: linear-gradient(105deg, rgba(237, 246, 249, 0.92) 0%, rgba(237, 246, 249, 0.92) 55%, transparent 55%), url(../img/booking-image-1.jpg);
   background-size: 100%;
   border-radius: 3px;
-  box-shadow: 1rem 2rem 4rem rgba(0, 0, 0, 0.4);
-  height: 50rem; }
+  box-shadow: 1rem 2rem 4rem rgba(0, 0, 0, 0.4); }
+  @media (max-width: 75em) {
+    .book {
+      background-image: linear-gradient(105deg, rgba(237, 246, 249, 0.92) 0%, rgba(237, 246, 249, 0.92) 65%, transparent 65%), url(../img/booking-image-1.jpg);
+      background-size: cover; } }
+  @media (max-width: 56.25em) {
+    .book {
+      background-image: linear-gradient(to right, rgba(237, 246, 249, 0.92) 0%, rgba(237, 246, 249, 0.92) 100%), url(../img/booking-image-1.jpg); } }
   .book__form {
     width: 50%;
     padding: 6rem; }
+    @media (max-width: 75em) {
+      .book__form {
+        width: 65%; } }
+    @media (max-width: 56.25em) {
+      .book__form {
+        width: 100%; } }
