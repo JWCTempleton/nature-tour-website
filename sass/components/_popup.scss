@@ -53,12 +53,18 @@
     }
 
     &__left {
-        width: 33.3333333%;
+        width: 40%;
         display: table-cell;
+
+        @include respond(tab-land) {
+            width: 0;
+            display: none;
+
+        }
     }
 
     &__right {
-        width: 66.6666667%;
+        width: 60%;
         display: table-cell;
         vertical-align: middle;
         padding: 3rem 3rem;
